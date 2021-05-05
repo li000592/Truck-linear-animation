@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+svg {
+  width: 100%;
+  height: auto;
+}
+body {
+  text-align: end;
+}
+#left-wheel {
+  animation: wheel 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#right-wheel {
+  animation: wheel 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+#lights {
+  animation: light 1s ease-in-out infinite alternate;
+}
+#car-body {
+  animation: light 1s ease-in-out infinite alternate;
+}
+@keyframes light {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(1%);
+  }
+}
+#truck {
+  width: 100%;
+  animation: car 3s ease-out infinite;
+  animation-timing-function: cubic-bezier(0, -0.6, -0.2, -0.6);
+}
+@keyframes car {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(-10%);
+  }
+}
